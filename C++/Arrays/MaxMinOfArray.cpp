@@ -1,7 +1,6 @@
 //Program to find the max and min element of the array.
 
-#include<iostream>
-#include<limits.h>
+#include<bits.stdc++.h>
 using namespace std;
 
 void readArray(int array[], int size){
@@ -12,20 +11,13 @@ void readArray(int array[], int size){
 }
 
 void findMinMax(int array[], int size){
-    int min = array[0];
-    int max = min;
-
-    for(int i = 0; i <size; i++){
-
-        if(min > array[i]){
-            min = array[i];
-        }
-        if(max < array[i]){
-            max = array[i];
-        }
-    }
-    cout << "Minimum Value = " << min << endl 
-         << "Maximum Value = " << max << endl;
+    
+    //using inbulit sort method
+    
+   sort(array,array+size);
+    cout<<"Minimum Element in given array is : "<<array[0]<<endl;
+    cout<<"Maximum Element in given array is : "<<array[size-1]<<endl;
+    
 }
 
 int main(){
